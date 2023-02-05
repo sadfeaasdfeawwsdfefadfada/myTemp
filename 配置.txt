@@ -1,1 +1,24 @@
 护眼配色 背景：#FAF9DE，#CCE8CF
+
+samba配置
+1. 查看用户 cat /etc/passwd
+2. 查看组 cat /etc/group
+3. 查看samba用户 pdbedit -Lv
+4. 创建samba用户 pdbedit -a username;
+5. 创建共享文件夹
+6. 配置samba
+    6.1 [global]
+
+        security = user
+    6.2 [myShare]
+        comment = Share for files
+        path = /home/happy/Documents/Fileshare
+        browseable = yes
+        writable = yes
+        valid users = happy
+7. 测试配置文件 testparm
+8. 启动samba服务 service smbd start
+9. 客户端登陆 \\ip
+
+
+
