@@ -1,0 +1,14 @@
+1.从github上下载tar.gz包
+2.解压tar包 tar -zxvf
+3.终端执行./cfw
+4.配置clash
+    4.1 导入节点 
+        进入 https://v2rayse.com/free-node
+        输入密码
+        选择后转换生成clash节点文件
+        在clash中点击Profiles，然后import节点
+    4.2 开启代理
+        设置->网络->网络代理->手动->将http和https的ip设置为127.0.0.1,端口设置为7890
+        将忽略值清空 
+
+
