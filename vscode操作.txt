@@ -1,0 +1,2 @@
+vscode设置中文
+    按住ctr+shift+p, 在输入框中输入Configure Display Language,在弹出的语言中，选中zh-cn，软件提示重启。点击重启按钮后，中文生效了。

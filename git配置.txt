@@ -1,0 +1,28 @@
+查看版本信息 git log
+本地回滚 git reset --hard 版本号
+github回滚 git push -f
+github用户名 js20230120@163.com
+
+git basic setting
+1.install git
+2.set username and email
+    2.1 git config --global user.name "var"
+    2.2 git config --global user.email "var"
+3.generate key
+    ssh-keygen -t rsa -C "test"
+4.copy pub key
+    ~/.ssh/id_rsa.pub
+5.generate ssh on github
+6.get repositories ssh code on github
+7.generate a local repositories 
+    7.1 enter into a folder
+    7.2 git init
+    7.3 create a readme file in this folder
+    7.4 git add [file]
+    7.5 git commit -c "var"
+8.connect remote repositories
+    8.1 git remote add [repositories name] [ssh address]
+9.pull files
+    9.1 git config --global pull.rebase=true
+    9.2 git pull [repositories name] master
+10.git push in the future...

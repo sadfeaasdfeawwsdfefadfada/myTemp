@@ -1,0 +1,13 @@
+修改MAC地址
+    如果在网卡的高级属性中没有网络地址属性，需要通过注册表添加...，然后再修改MAC地址
+    1.启动注册表 利用快捷键Win+R,打开运行窗口输入regedit
+    2.定位到网卡目录 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\ Control\Class\{4D36E972-E325-11CE-BFC1-08002BE10318}\
+    3.每个00xx的代号代表一个网卡，点击每个编号后，在右侧的DriveDesc值中找到网卡的名称
+    4.在这个网卡的Ndi/Params中新建NetworkAddress项
+    5.在NetworkAddress中
+        5.1 新建default字符串
+        5.2 新建LimitText字符串，值设置为12
+        5.3 新建Optional字符串，值设置为1
+        5.4 新建ParamDesc字符串，值设置为网络地址
+        5.5 新建type字符串，值设置为1
+        5.6 新建UpperCase字符串，值设置为1
