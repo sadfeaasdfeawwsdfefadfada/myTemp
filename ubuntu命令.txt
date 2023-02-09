@@ -7,3 +7,8 @@ cat /etc/passwd 查看用户信息
     6.第五个字段是注释描述
     7.第六个字段是主目录,用户开始工作的目录
     8.第七个字段是登陆shell
+
+修改mac地址
+ sudo ifconfig ens33 down
+ sudo ifconfig ens33 hw ether [new mac address]
+ sudo ifconfig ens33 up
