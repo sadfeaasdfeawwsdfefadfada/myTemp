@@ -5,7 +5,7 @@ samba配置
 2. 查看组 cat /etc/group
 3. 查看samba用户 pdbedit -Lv
 4. 创建samba用户 pdbedit -a username;
-5. 创建共享文件夹
+5. 创建共享文件夹A
 6. 配置samba
     6.1 [global]
 
