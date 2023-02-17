@@ -12,3 +12,12 @@ cat /etc/passwd 查看用户信息
  sudo ifconfig ens33 down
  sudo ifconfig ens33 hw ether [new mac address]
  sudo ifconfig ens33 up
+
+ 查找文件1
+ grep -E -i 'root|mail' -n /etc/passwd
+
+ 替换文件
+ sed -e 's/root/ROOT/gp' -n /etc/passwd
+
+ 
+ 
