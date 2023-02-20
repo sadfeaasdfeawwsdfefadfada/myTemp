@@ -8,12 +8,15 @@ cat /etc/passwd 查看用户信息
     7.第六个字段是主目录,用户开始工作的目录
     8.第七个字段是登陆shell
 
-修改mac地址
+修改mac地址(17.0之前)
  sudo ifconfig ens33 down
  sudo ifconfig ens33 hw ether [new mac address]
  sudo ifconfig ens33 up
  
- ubuntu 20.4修改ip地址
+ubuntu 20.4修改mac地址
+ 安装macchanger后修改 
+
+ubuntu 20.4修改ip地址
  粘贴以下内容
  network:
   ethernets:
@@ -26,6 +29,3 @@ cat /etc/passwd 查看用户信息
         addresses: [10.96.0.2]
   version: 2
   sudo netplan apply
-
-  ubuntu 20.4修改mac地址
-  https://vitux.com/how-to-change-the-mac-address-on-ubuntu-using-macchanger/
