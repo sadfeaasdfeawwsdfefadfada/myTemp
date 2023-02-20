@@ -25,6 +25,7 @@ cat /etc/passwd 查看用户信息
       nameservers:
         addresses: [10.96.0.2]
   version: 2
+  sudo netplan apply
 
   ubuntu 20.4修改mac地址
   https://vitux.com/how-to-change-the-mac-address-on-ubuntu-using-macchanger/
