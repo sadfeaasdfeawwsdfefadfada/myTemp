@@ -24,3 +24,6 @@
 9.Windows控制面板中打开启动或关闭windows功能，勾选SMB 1.0/CIFS文件共享支持
 10.windows下访问共享目录
     运行下输入\\196.xx.xx.xx
+
+11.修改用户密码
+    sudo smbpasswd -a king
