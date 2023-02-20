@@ -12,12 +12,16 @@ cat /etc/passwd 查看用户信息
  sudo ifconfig ens33 down
  sudo ifconfig ens33 hw ether [new mac address]
  sudo ifconfig ens33 up
-
- 查找文件1
- grep -E -i 'root|mail' -n /etc/passwd
-
- 替换文件
- sed -e 's/root/ROOT/gp' -n /etc/passwd
-
  
- 
+ ubuntu 20.4修改ip地址
+ 粘贴以下内容
+ network:
+  ethernets:
+    ens33:
+      dhcp4: no
+      addresses: [10.96.0.151/24]
+      optional: true
+      gateway4: 10.96.0.2
+      nameservers:
+        addresses: [10.96.0.2]
+  version: 2
