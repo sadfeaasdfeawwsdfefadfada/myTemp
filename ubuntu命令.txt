@@ -29,3 +29,14 @@ ubuntu 20.4修改ip地址
         addresses: [10.96.0.2]
   version: 2
   sudo netplan apply
+
+sed显示文本
+  sed '5,9p' hhh.txt -n 从第五行开始一直显示到第九行
+  sed '5,+3p' hhh.txt -n congo第五行开始向下显示三行
+sed筛选文本
+  sed '/addresses/p' hhh.txt -n
+sed删除文本
+  sed '/addresses/d' hhh.txt
+  sed '4,$d' hhh.txt 从第四行开始删除到结尾
+sed替换文本
+  sed -r "s/[0-9]{1,3}\//$num\//g" 01-network-manager-all.yaml
