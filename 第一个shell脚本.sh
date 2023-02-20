@@ -17,8 +17,13 @@ do
     macchanger -r ens33
     # sudo macchanger –m c2:43:bc:1c:62:01 enp0s3 手动修改mac
     # sudo macchanger –p enp0s3 还原原始mac
-    sleep 10;
-    echo "hello world"
-    #/sbin/ifconfig ens33 10.96.0.150
+    min_num=2
+    max_num=254
+    dist=$(echo "$max_num-$min_num"|bc)
+    num=$(($RANDOM%($dist+1)+$min_num))
+    sed -r "s/[0-9]{1,3}\//$num\//g" /etc/netplan/01-network-manager-all.yaml -i
+    sudo netplan apply
+    echo ""
+    sleep 600; 
 done
 #EOF
