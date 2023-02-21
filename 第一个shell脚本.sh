@@ -5,6 +5,7 @@
 #在myTry文件中写 echo "hello world"
 #安装了net-tools
 #:<<EOF
+runnum=0
 while true
 do
     ########################################
@@ -23,7 +24,8 @@ do
     num=$(($RANDOM%($dist+1)+$min_num))
     sed -r "s/[0-9]{1,3}\//$num\//g" /etc/netplan/01-network-manager-all.yaml -i
     sudo netplan apply
-    echo ""
+    runnum=$runnum+1
+    echo "第"$(($runnum))"次执行"
     sleep 600; 
 done
 #EOF
