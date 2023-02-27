@@ -3,22 +3,20 @@
 2.设置共享文件夹
 3.添加目录权限
     chmod 777 /home/Documents/Fileshare
-4.创建一个组
+4.创建一个组(用已激活账户就不需要这步)
     sudo groupadd king
-5.创建一个用户
+5.创建一个用户(用已激活账户就不需要这步)
     sudo useradd king -g king
 6.samba服务添加用户
-    sudo smbpasswd -a king
+    sudo smbpasswd -a happy
 7.配置samba文件
     sudo vim /etc/samba/smb.conf
-        [share]
+        [myshare]
         comment=This is samba dir
-        path=/home/king/workspace
-        create mask=0755
-        directory mask=0755
-        writeable=yes
-        valid users=king
-        browseable=yes
+        path=/home/happy/Documents/Fileshare
+        browseable = yes
+        writable = yes
+        valid users = happy
 8.启动samba服务
     sudo service smbd restart
 9.Windows控制面板中打开启动或关闭windows功能，勾选SMB 1.0/CIFS文件共享支持
