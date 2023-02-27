@@ -1,0 +1,18 @@
+ubuntu 20配置永久IP
+    sudo vim /etc/netplan/01-network-manager-all.yaml
+    录入以下信息：
+        network:
+            ethernets:
+                ens33:
+                    dhcp4: no
+                    addresses: [10.96.0.250/24]
+                    optional: true
+                    gateway4: 10.96.0.2
+                    nameservers:
+                        addresses: [10.96.0.2]
+            version: 2# Let NetworkManager manage all devices on this system
+        network:
+            version: 2
+            renderer: NetworkManager
+    保存这个yaml文件(esc>:wq!>enter)
+    sudo netplan apply
